@@ -3,7 +3,6 @@
 #include <string.h>
 #define DIM 100
 using namespace std;
-
 struct libreria
 {
     string codice;
@@ -42,21 +41,32 @@ libreria inserisci()
     cout<<"Inserire il tag del genere letterario: ";
     cin>>inserire.tag;
 
+    cout<<endl;
+    cout<<endl;
+
     return inserire;
 }
-void catalogo()
+//libreria cat[evo];
+libreria catalogo(libreria vetl, int evo)
+{
+    libreria cat[evo];
+    int n=evo;
+    for(int i = 0; i<n; i++)
+    {
+        cout<<cat[i].codice<<"   "<<cat[i].titolo<<"/"<<cat[i].autore<<"/"<<cat[i].editore<<"/"<<cat[i].anno<<"/"<<cat[i].prezzo<<"/"<<cat[i].tag;
+        cout<<endl;
+    }
+    return ;
+}
+void cancella(int evo)
 {
 
 }
-void cancella()
+void ricerca(int evo)
 {
 
 }
-void ricerca()
-{
-
-}
-void modifica()
+void modifica(int evo)
 {
 
 }
@@ -81,16 +91,16 @@ void menu()
                 evo++;
                 break;
             case 2:
-                catalogo();
+                catalogo(vetl, evo);
                 break;
             case 3:
-                cancella();
+                cancella(evo);
                 break;
             case 4:
-                ricerca();
+                ricerca(evo);
                 break;
             case 5:
-                modifica();
+                modifica(evo);
                 break;
             case 6:
                 cout<<"CHIUSURA PROGRAMMA";
