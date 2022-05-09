@@ -2,9 +2,13 @@
 #include <stdlib.h>
 #include <string.h>
 #define DIM 100
+/// <summary> Programma che gestisce il catalogo di una libreria </summary>
+/// <remarks>
+/// <list type="bullet">
 using namespace std;
 struct libreria
 {
+    /// <summary> Dichiarazione struct e variabili </summary>
     string codice;
     string titolo;
     string autore;
@@ -18,6 +22,7 @@ libreria vetl[DIM];
 
 libreria inserisci()
 {
+    /// <summary> Funzione che si occupa dell'input delle variabili </summary>
     libreria inserire;
 
     cout<<"Inserire il codice ISBN del libro: ";
@@ -49,6 +54,7 @@ libreria inserisci()
 //libreria cat[evo];
 libreria catalogo(libreria vetl, int evo)
 {
+    /// <summary> Funzione che manda in output il catalogo completo della libreria </summary>
     libreria cat[evo];
     int n=evo;
     for(int i = 0; i<n; i++)
@@ -60,6 +66,7 @@ libreria catalogo(libreria vetl, int evo)
 }
 void cancella(int evo)
 {
+    /// <summary> Funzione che permette di eliminare un elemento dal catalogo </summary>
     string cod_tempo;
     int sco;
 
@@ -85,6 +92,7 @@ void cancella(int evo)
 }
 void ricerca(int evo)
 {
+    /// <summary> Funzione che ricerca un determinato elemento nel catalogo </summary>
     string cod_tempo;
     int sco;
 
@@ -113,6 +121,7 @@ void ricerca(int evo)
 }
 void modifica(int evo)
 {
+    /// <summary> Funzione che, tramite input, permette di modificare le variabili </summary>
     string cod_tempo;
     int sco;
 
@@ -163,6 +172,7 @@ void modifica(int evo)
 }
 void menu()
 {
+    /// <summary> Menu iniziale che permette di navigare nel software </summary>
     int evo=0;
     int scegliere;
     do{
